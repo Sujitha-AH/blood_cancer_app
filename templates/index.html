@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Cancer Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Cancer Predictor</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <h3>🔹 Upload PDF Report</h3>
+            <input type="file" name="pdf" accept=".pdf"><br><br>
+
+            <h3>🔸 Or Enter Values Manually</h3>
+            {% for feature in features %}
+                <label>{{ feature }}</label><br>
+                <input type="text" name="{{ feature }}"><br><br>
+            {% endfor %}
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
+

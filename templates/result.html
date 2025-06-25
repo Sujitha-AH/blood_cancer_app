@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p><strong>{{ result }}</strong></p>
+        {% if advice %}
+        <p class="advice">{{ advice }}</p>
+        {% endif %}
+        <a href="/">← Predict Again</a>
+    </div>
+</body>
+</html>
